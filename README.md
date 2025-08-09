@@ -78,7 +78,11 @@ your application for performance and speed.
 
 ## Running unit tests
 
-TODO: testing with jest is broken. Sorry :(
+Tests are written with Jest and can be run with:
+
+```bash
+npm run test
+```
 
 ## Running end-to-end tests
 
