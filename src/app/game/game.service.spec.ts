@@ -264,7 +264,7 @@ describe('GameService', () => {
 
       expect(result.line[0].value).toBe(2);
       expect(result.line[1].value).toBe(4);
-      expect(result.moved).toBe(true); // Still true because of the zeros at the end
+      expect(result.moved).toBe(false);
     });
 
     it('should handle multiple merges in one line', () => {

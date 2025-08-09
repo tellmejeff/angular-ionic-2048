@@ -7,9 +7,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest --testEnvironment=jsdom --transformIgnorePatterns=\"node_modules/(?!(@ionic|@stencil|ionicons)/)\"",
-    "test:watch": "jest --watch --testEnvironment=jsdom --transformIgnorePatterns=\"node_modules/(?!(@ionic|@stencil|ionicons)/)\"",
-    "test:coverage": "jest --coverage --testEnvironment=jsdom --transformIgnorePatterns=\"node_modules/(?!(@ionic|@stencil|ionicons)/)\""
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "prettier": {
     "overrides": [
@@ -36,12 +36,13 @@
     "@capacitor/keyboard": "7.0.2",
     "@capacitor/status-bar": "7.0.2",
     "@ionic/angular": "^8.7.2",
-    "ionicons": "^7.0.0",
+    "ionicons": "^7.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-builders/jest": "^20.0.0",
     "@angular-devkit/build-angular": "^20.1.5",
     "@angular-eslint/builder": "^20.0.0",
     "@angular-eslint/eslint-plugin": "^20.0.0",
