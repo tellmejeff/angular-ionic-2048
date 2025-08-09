@@ -1,6 +1,8 @@
-# 2048 Game - Angular, Ionic, and PhaserJS
+# 2048 Game - Angular and Ionic
 
-A clone of the popular 2048 game built with Angular, Ionic, and PhaserJS. This project demonstrates how to create an interactive game using modern web technologies.
+A clone of the popular 2048 game built with Angular and Ionic.
+This project demonstrates how to create an interactive game
+using modern web technologies.
 
 ## Game Description
 
@@ -19,7 +21,6 @@ A clone of the popular 2048 game built with Angular, Ionic, and PhaserJS. This p
 
 - **Angular**: Frontend framework for building the application
 - **Ionic**: UI components and mobile-friendly features
-- **PhaserJS**: Game framework for handling animations and interactions
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
 
@@ -33,25 +34,31 @@ To check your Node.js version:
 node -v
 ```
 
-If you need to update Node.js, visit [https://nodejs.org/](https://nodejs.org/) for installation instructions.
+If you need to update Node.js, visit [https://nodejs.org/](https://nodejs.org/)
+for installation instructions.
 
-Once you have the correct Node.js version, start a local development server by running:
+Once you have the correct Node.js version, start a local development
+server by running:
 
 ```bash
 ng serve
 ```
 
-When the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+When the server is running, open your browser and navigate to
+`http://localhost:4200/`. The application will automatically
+reload whenever you modify any of the source files.
 
 ## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Angular CLI includes powerful code scaffolding tools. To generate
+a new component, run:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+For a complete list of available schematics (such as `components`,
+`directives`, or `pipes`), run:
 
 ```bash
 ng generate --help
@@ -65,15 +72,13 @@ To build the project run:
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This will compile your project and store the build artifacts in
+the `dist/` directory. By default, the production build optimizes
+your application for performance and speed.
 
 ## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
+TODO: testing with jest is broken. Sorry :(
 
 ## Running end-to-end tests
 
@@ -83,8 +88,11 @@ For end-to-end (e2e) testing, run:
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Angular CLI does not come with an end-to-end testing framework
+by default. You can choose one that suits your needs.
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For more information on using the Angular CLI, including detailed
+command references, visit the
+[Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
