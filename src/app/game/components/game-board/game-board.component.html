@@ -1,0 +1,55 @@
+<div class="game-container">
+  <div class="game-header">
+    <div class="title-container">
+      <h1 class="title">2048</h1>
+      <div class="subtitle">Join the tiles, get to <strong>2048!</strong></div>
+    </div>
+    <div class="scores-container">
+      <div class="score-box">
+        <div class="score-label">SCORE</div>
+        <div class="score-value">{{ gameService.score() }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-controls">
+    <ion-button (click)="resetGame()" color="medium">New Game</ion-button>
+  </div>
+
+  <div class="game-status" *ngIf="gameService.gameOver()">
+    <div class="game-over">
+      Game Over!
+      <ion-button (click)="resetGame()" color="primary">Try Again</ion-button>
+    </div>
+  </div>
+
+  <div class="game-status" *ngIf="gameService.gameWon()">
+    <div class="game-won">
+      You Win!
+      <ion-button (click)="resetGame()" color="success">Play Again</ion-button>
+    </div>
+  </div>
+
+  <div
+    class="game-board"
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)">
+    <div class="grid-container">
+      <div class="grid-row" *ngFor="let row of getRange(4); trackBy: trackByTile">
+        <div class="grid-cell" *ngFor="let col of getRange(4); trackBy: trackByTile"></div>
+      </div>
+    </div>
+
+    <div class="tile-container">
+      <app-tile
+        *ngFor="let tile of getNonZeroTiles(); trackBy: trackByTile"
+        [tile]="tile">
+      </app-tile>
+    </div>
+  </div>
+
+  <div class="game-instructions">
+    <p><strong>HOW TO PLAY:</strong> Use your <strong>arrow keys</strong> or <strong>swipe</strong> to move the tiles.
+      When two tiles with the same number touch, they <strong>merge into one!</strong></p>
+  </div>
+</div>

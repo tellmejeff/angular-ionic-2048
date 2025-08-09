@@ -1,0 +1,194 @@
+.game-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  color: #776e65;
+}
+
+.subtitle {
+  color: #776e65;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.scores-container {
+  display: flex;
+  gap: 10px;
+}
+
+.score-box {
+  background-color: #bbada0;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 3px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.score-label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.score-value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.game-controls {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.game-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(238, 228, 218, 0.73);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in 800ms ease;
+  border-radius: 6px;
+}
+
+.game-over, .game-won {
+  background-color: rgba(238, 228, 218, 0.5);
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #776e65;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.game-won {
+  background-color: rgba(237, 194, 46, 0.5);
+  color: #f9f6f2;
+}
+
+.game-board {
+  position: relative;
+  background-color: #bbada0;
+  border-radius: 6px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Makes it square */
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.grid-row {
+  display: flex;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.grid-cell {
+  background-color: rgba(238, 228, 218, 0.35);
+  border-radius: 3px;
+  flex-grow: 1;
+}
+
+.tile-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+}
+
+.game-instructions {
+  margin-top: 20px;
+  color: #776e65;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Position classes for tiles */
+.position-0-0 { top: 15px; left: 15px; }
+.position-0-1 { top: 15px; left: calc(25% + 11.25px); }
+.position-0-2 { top: 15px; left: calc(50% + 7.5px); }
+.position-0-3 { top: 15px; left: calc(75% + 3.75px); }
+
+.position-1-0 { top: calc(25% + 11.25px); left: 15px; }
+.position-1-1 { top: calc(25% + 11.25px); left: calc(25% + 11.25px); }
+.position-1-2 { top: calc(25% + 11.25px); left: calc(50% + 7.5px); }
+.position-1-3 { top: calc(25% + 11.25px); left: calc(75% + 3.75px); }
+
+.position-2-0 { top: calc(50% + 7.5px); left: 15px; }
+.position-2-1 { top: calc(50% + 7.5px); left: calc(25% + 11.25px); }
+.position-2-2 { top: calc(50% + 7.5px); left: calc(50% + 7.5px); }
+.position-2-3 { top: calc(50% + 7.5px); left: calc(75% + 3.75px); }
+
+.position-3-0 { top: calc(75% + 3.75px); left: 15px; }
+.position-3-1 { top: calc(75% + 3.75px); left: calc(25% + 11.25px); }
+.position-3-2 { top: calc(75% + 3.75px); left: calc(50% + 7.5px); }
+.position-3-3 { top: calc(75% + 3.75px); left: calc(75% + 3.75px); }
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
