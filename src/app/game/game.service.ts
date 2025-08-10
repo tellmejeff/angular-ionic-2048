@@ -362,7 +362,7 @@ export class GameService {
 
       // If we get here, there are no empty cells and no possible merges
       this.gameOver.set(true);
-    }, 200); // Wait a bit longer than the tile addition delay to ensure the new tile is in place
+    }, 300); // Wait a bit longer than the tile addition delay to ensure the new tile is in place
   }
 
   /**
